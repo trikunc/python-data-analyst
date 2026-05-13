@@ -1,0 +1,4 @@
+Baris 1
+Baris 2
+Baris 3 dari append
+Baris 4 dari append
