@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 def add(a=None, b=None):
     if a == None or b == None:
         print("parameter tidak lengkap")
@@ -36,3 +39,13 @@ def bmi_check(bmi):
         print("Kamu termasuk kategori obesitas")
     else:
         print("ERROR")
+
+
+def save_bmi(name, bmi, BB, TB):
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open("Hari_2/function/bmi_data.txt", "a") as file:
+        file.write(
+            f"{timestamp} | {name} | BB: {BB} kg | TB: {TB} m | BMI: {bmi:.2f}\n"
+        )
+
+    print(f"\nData berhasil disimpan ke bmi_data.txt")
